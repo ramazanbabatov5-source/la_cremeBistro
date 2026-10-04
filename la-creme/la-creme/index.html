@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>La Crème — кондитерская и бистро в Махачкале и Каспийске</title>
+  <meta name="description" content="La Crème: авторские торты на заказ, десерты, выпечка, кофе и бистро. Махачкала — Дзержинского 12а, Ярагского 94а, Акушинского 180б. Каспийск — Халилова 38.">
+  <meta name="theme-color" content="#FAF6EC">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta property="og:title" content="La Crème — кондитерская и бистро">
+  <meta property="og:description" content="Авторские торты на заказ, десерты и кофе. Махачкала, Каспийск.">
+  <meta property="og:image" content="assets/cake-leaves.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Onest:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ============ НАВИГАЦИЯ ============ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-wrap">
+    <a class="brand" href="#top" aria-label="La Crème — наверх">
+      <img class="brand-logo" src="assets/logo.png" alt="" width="46" height="46">
+      <span class="brand-word">La Crème</span>
+    </a>
+    <div class="navlinks" id="navlinks">
+      <a href="#menu">Меню</a>
+      <a href="#cakes">Торты на заказ</a>
+      <a href="#bistro">Бистро</a>
+      <a href="#about">О нас</a>
+      <a href="#places">Адреса</a>
+    </div>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Корзина">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="navlinks"><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-content">
+      <p class="kicker">Кондитерская и бистро · Махачкала, Каспийск</p>
+      <h1>Десерты, ради которых оглядываются</h1>
+      <p class="sub">Авторские торты, французская выпечка и кофе. Печём с семи утра, крем взбиваем в день заказа.</p>
+      <div class="cta-row">
+        <a href="#menu" class="btn btn-primary">Смотреть меню</a>
+        <a href="#cakes" class="btn btn-ghost">Торты на заказ</a>
+      </div>
+      <ul class="hero-facts">
+        <li><strong>4</strong><span>точки в двух городах</span></li>
+        <li><strong>07:00</strong><span>начинаем печь</span></li>
+        <li><strong>09–22</strong><span>открыты ежедневно</span></li>
+      </ul>
+    </div>
+    <div class="hero-arch" aria-hidden="false">
+      <div class="arch-frame">
+        <img src="assets/cake-leaves.webp" alt="Белый свадебный торт, украшенный сахарными листьями" fetchpriority="high">
+      </div>
+      <img class="arch-seal" src="assets/logo.png" alt="" width="104" height="104">
+    </div>
+  </div>
+</header>
+
+<!-- ============ МЕНЮ ============ -->
+<section class="section" id="menu">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Меню</h2>
+      <p>Добавляйте позиции в корзину и оформляйте заказ. Подтвердим по телефону или в WhatsApp.</p>
+    </div>
+    <div class="menu-layout">
+      <aside class="menu-aside">
+        <figure class="menu-photo">
+          <img src="assets/bistro-case.webp" alt="Витрина с десертами La Crème" loading="lazy">
+        </figure>
+        <a class="menu-link" href="https://foodeon.com/venue/la-creme-bistro-gznv" target="_blank" rel="noopener">
+          <span>Полное меню бистро</span>
+          <small>Завтраки, салаты, горячее — на Foodeon</small>
+        </a>
+      </aside>
+      <div class="menu-main">
+        <div class="tabs" id="menuTabs" role="tablist" aria-label="Разделы меню"></div>
+        <p class="tab-note" id="menuNote"></p>
+        <div class="menu-list" id="menuList" role="tabpanel"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ТОРТЫ НА ЗАКАЗ ============ -->
+<section class="section section-tint" id="cakes">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Торты на заказ</h2>
+      <p>Свадьбы, дни рождения, корпоративы. Покажите фото или расскажите идею — сделаем по вашему вкусу и размеру.</p>
+    </div>
+    <div class="cakes-grid" id="cakesGrid"></div>
+    <div class="cakes-cta">
+      <p>Не нашли свой вариант? Опишите идею — рассчитаем стоимость и срок.</p>
+      <button class="btn btn-primary" data-cake-request="Свой дизайн">Заказать свой торт</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ БИСТРО ============ -->
+<section class="section" id="bistro">
+  <div class="wrap bistro-grid">
+    <div class="bistro-photos">
+      <img class="bp-main" src="assets/bistro-evening.webp" alt="Вечер в La Crème Bistro" loading="lazy">
+      <img class="bp-food" src="assets/bistro-food.webp" alt="Завтраки, салаты и горячее в бистро" loading="lazy">
+      <img class="bp-cups" src="assets/bistro-cups.webp" alt="Фарфоровые чашки на полке" loading="lazy">
+    </div>
+    <div class="bistro-text">
+      <h2>Теперь это не только торты</h2>
+      <p>На Акушинского, 180б открылось бистро. Завтраки на любой вкус, салаты и лёгкие блюда, горячее для уютных встреч. И, конечно, наши любимые торты — они остались.</p>
+      <p>Место, где кофе становится поводом остаться подольше.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://foodeon.com/venue/la-creme-bistro-gznv" target="_blank" rel="noopener">Открыть меню бистро</a>
+        <a class="btn btn-ghost" href="#places">Как нас найти</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ О НАС ============ -->
+<section class="section section-green" id="about">
+  <div class="wrap about-grid">
+    <div class="about-text">
+      <h2>Готовим так, как готовили бы для своих</h2>
+      <p>La Crème началась как небольшая кондитерская, а сегодня это четыре точки в Махачкале и Каспийске. Правило осталось прежним: десерты не залёживаются на витрине, а крем для тортов взбивается утром того дня, когда вы его заберёте.</p>
+    </div>
+    <ul class="stats">
+      <li><strong>07:00</strong><span>начинаем печь, к открытию всё свежее</span></li>
+      <li><strong>25+</strong><span>видов десертов в постоянном меню</span></li>
+      <li><strong>4</strong><span>адреса: три в Махачкале и один в Каспийске</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ АДРЕСА ============ -->
+<section class="section" id="places">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Где мы находимся</h2>
+      <p>Открыто ежедневно с 09:00 до 22:00, без выходных.</p>
+    </div>
+    <div class="places-grid" id="placesGrid"></div>
+    <div class="phone-row">
+      <span>Заказы и вопросы</span>
+      <a href="tel:+79285054422" class="phone-big">+7 (928) 505-44-22</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-wrap">
+    <div class="footer-brand"><img src="assets/logo.png" alt="" width="40" height="40"><span>La Crème</span></div>
+    <span>Махачкала · Каспийск</span>
+    <a href="tel:+79285054422">+7 (928) 505-44-22</a>
+  </div>
+</footer>
+
+<!-- ============ КОРЗИНА ============ -->
+<div class="overlay" id="cartOverlay"></div>
+<aside class="cart-panel" id="cartPanel" aria-label="Корзина" aria-hidden="true">
+  <div class="panel-head">
+    <h3>Ваш заказ</h3>
+    <button class="icon-btn" id="cartClose" aria-label="Закрыть корзину">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer" id="cartFooter" hidden>
+    <div class="cart-total"><span>Итого</span><strong id="cartTotal">0 ₽</strong></div>
+    <button class="btn btn-gold btn-block" id="checkoutBtn">Оформить заказ</button>
+  </div>
+</aside>
+
+<!-- ============ ОФОРМЛЕНИЕ ЗАКАЗА ============ -->
+<div class="overlay" id="modalOverlay"></div>
+<div class="modal" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderTitle" aria-hidden="true">
+  <div class="panel-head">
+    <h3 id="orderTitle">Оформление заказа</h3>
+    <button class="icon-btn" data-close-modal aria-label="Закрыть">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <form class="form" id="orderForm" novalidate>
+    <fieldset class="seg" aria-label="Способ получения">
+      <input type="radio" name="method" id="m-pickup" value="pickup" checked>
+      <label for="m-pickup">Самовывоз</label>
+      <input type="radio" name="method" id="m-delivery" value="delivery">
+      <label for="m-delivery">Доставка</label>
+    </fieldset>
+
+    <div class="field" id="branchField">
+      <label for="branch" id="branchLabel">Где заберёте</label>
+      <select id="branch" name="branch" required></select>
+      <p class="err" data-err="branch"></p>
+    </div>
+
+    <div class="field" id="addressField" hidden>
+      <label for="address">Адрес доставки</label>
+      <input id="address" name="address" type="text" autocomplete="street-address" placeholder="Город, улица, дом, квартира">
+      <p class="hint">Стоимость доставки уточним при подтверждении заказа.</p>
+      <p class="err" data-err="address"></p>
+    </div>
+
+    <div class="row-2">
+      <div class="field">
+        <label for="date">Дата</label>
+        <input id="date" name="date" type="date" required>
+        <p class="err" data-err="date"></p>
+      </div>
+      <div class="field">
+        <label for="time">Время</label>
+        <input id="time" name="time" type="time" required>
+        <p class="err" data-err="time"></p>
+      </div>
+    </div>
+
+    <div class="row-2">
+      <div class="field">
+        <label for="customerName">Ваше имя</label>
+        <input id="customerName" name="name" type="text" autocomplete="given-name" required>
+        <p class="err" data-err="name"></p>
+      </div>
+      <div class="field">
+        <label for="customerPhone">Телефон</label>
+        <input id="customerPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
+        <p class="err" data-err="phone"></p>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="customerComment">Комментарий <span class="opt">необязательно</span></label>
+      <textarea id="customerComment" name="comment" rows="2" placeholder="Надпись на торте, пожелания, аллергии"></textarea>
+    </div>
+
+    <div class="order-summary">
+      <div id="orderSummaryItems"></div>
+      <div class="order-total"><span>К оплате</span><strong id="orderTotal">0 ₽</strong></div>
+      <p class="hint">Оплата при получении: наличными или картой.</p>
+    </div>
+
+    <button type="submit" class="btn btn-gold btn-block">Отправить заказ в WhatsApp</button>
+    <p class="hint center">Откроется WhatsApp с готовым сообщением. Нажмите «Отправить», и мы свяжемся с вами для подтверждения.</p>
+  </form>
+
+  <div class="done" id="orderDone" hidden>
+    <div class="done-mark"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></div>
+    <h4>Почти готово</h4>
+    <p>Мы открыли WhatsApp с вашим заказом. Если сообщение не отправилось, нажмите кнопку ниже или позвоните нам.</p>
+    <a class="btn btn-gold btn-block" id="doneWa" href="#" target="_blank" rel="noopener">Открыть WhatsApp ещё раз</a>
+    <button class="btn btn-ghost btn-block" id="doneCopy" type="button">Скопировать текст заказа</button>
+    <a class="btn btn-ghost btn-block" href="tel:+79285054422">Позвонить +7 (928) 505-44-22</a>
+  </div>
+</div>
+
+<!-- ============ ЗАЯВКА НА ТОРТ ============ -->
+<div class="modal" id="cakeModal" role="dialog" aria-modal="true" aria-labelledby="cakeTitle" aria-hidden="true">
+  <div class="panel-head">
+    <h3 id="cakeTitle">Заявка на торт</h3>
+    <button class="icon-btn" data-close-modal aria-label="Закрыть">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <form class="form" id="cakeForm" novalidate>
+    <p class="cake-pick" id="cakePick"></p>
+    <div class="field">
+      <label for="cakeEvent">Повод</label>
+      <select id="cakeEvent" name="event">
+        <option>День рождения</option>
+        <option>Свадьба</option>
+        <option>Никах</option>
+        <option>Юбилей</option>
+        <option>Корпоратив</option>
+        <option>Другое</option>
+      </select>
+    </div>
+    <div class="row-2">
+      <div class="field">
+        <label for="cakeDate">Дата торжества</label>
+        <input id="cakeDate" name="date" type="date" required>
+        <p class="err" data-err="date"></p>
+      </div>
+      <div class="field">
+        <label for="cakeGuests">Сколько гостей</label>
+        <input id="cakeGuests" name="guests" type="number" min="1" inputmode="numeric" placeholder="30" required>
+        <p class="err" data-err="guests"></p>
+      </div>
+    </div>
+    <div class="row-2">
+      <div class="field">
+        <label for="cakeName">Ваше имя</label>
+        <input id="cakeName" name="name" type="text" autocomplete="given-name" required>
+        <p class="err" data-err="name"></p>
+      </div>
+      <div class="field">
+        <label for="cakePhone">Телефон</label>
+        <input id="cakePhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
+        <p class="err" data-err="phone"></p>
+      </div>
+    </div>
+    <div class="field">
+      <label for="cakeComment">Пожелания <span class="opt">необязательно</span></label>
+      <textarea id="cakeComment" name="comment" rows="3" placeholder="Начинка, цвет, надпись, ссылка на фото-пример"></textarea>
+    </div>
+    <button type="submit" class="btn btn-gold btn-block">Отправить заявку в WhatsApp</button>
+    <p class="hint center">Фото-примеры можно будет прикрепить прямо в чате WhatsApp.</p>
+  </form>
+  <div class="done" id="cakeDone" hidden>
+    <div class="done-mark"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></div>
+    <h4>Заявка готова</h4>
+    <p>Мы открыли WhatsApp с вашей заявкой. Отправьте сообщение, и кондитер ответит с расчётом стоимости.</p>
+    <a class="btn btn-gold btn-block" id="cakeWa" href="#" target="_blank" rel="noopener">Открыть WhatsApp ещё раз</a>
+    <a class="btn btn-ghost btn-block" href="tel:+79285054422">Позвонить +7 (928) 505-44-22</a>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"><span id="toastMessage"></span></div>
+
+<script src="menu.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
